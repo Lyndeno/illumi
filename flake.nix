@@ -11,7 +11,7 @@
       pkgs = nixpkgs.legacyPackages."${system}";
       naersk-lib = naersk.lib."${system}";
     in rec {
-      packages.illuminator = naersk-lib.buildPackage {
+      packages.gnome-smbios = naersk-lib.buildPackage {
         pname = "gnome-smbios";
         root = ./.;
         nativeBuildInputs = [ pkgs.gtk4 pkgs.pkg-config ];
