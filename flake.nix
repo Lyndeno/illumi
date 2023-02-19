@@ -14,7 +14,7 @@
       packages.gnome-smbios = naersk-lib.buildPackage {
         pname = "gnome-smbios";
         root = ./.;
-        nativeBuildInputs = [ pkgs.gtk4 pkgs.pkg-config ];
+        nativeBuildInputs = [ pkgs.gtk4 pkgs.pkg-config pkgs.libadwaita ];
       };
       packages.default = packages.gnome-smbios;
 
@@ -24,7 +24,7 @@
       apps.default = apps.gnome-smbios;
 
       devShells.default = pkgs.mkShell {
-        nativeBuildInputs = with pkgs; [ rustc cargo gtk4 pkg-config ];
+        nativeBuildInputs = with pkgs; [ rustc cargo gtk4 pkg-config libadwaita ];
         RUST_SRC_PATH = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
       };
     });

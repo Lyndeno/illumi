@@ -1,5 +1,6 @@
 use gtk::prelude::*;
-use gtk::{glib, Application, ApplicationWindow, Button};
+use gtk::{glib, Button, ApplicationWindow};
+use adw::{Application};
 
 const APP_ID: &str = "org.lyndeno.gnome-smbios";
 
