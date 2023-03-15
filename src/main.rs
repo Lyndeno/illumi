@@ -5,7 +5,7 @@ use adw::{Application};
 const APP_ID: &str = "org.lyndeno.gnome-smbios";
 
 fn main() -> glib::ExitCode {
-    println!("Hello, world!");
+    //println!("Hello, world!");
 
     // Create app
     let app = Application::builder().application_id(APP_ID).build();
