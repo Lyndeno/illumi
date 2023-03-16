@@ -27,10 +27,20 @@ fn build_ui(app: &Application) {
         .margin_end(12)
         .build();
 
+
     // Connect to "clicked" signal of button
     button.connect_clicked(|button| {
         // set the label to "Hello" after click
         button.set_label("Hello");
+        let thing = adw::AboutWindow::builder()
+            .application_name("Lyndon's Program")
+            .application_icon("org.example.App")
+            .copyright("Lyndon Sanche")
+            .version("0.0.1")
+            .website("https://lyndeno.ca")
+            .developer_name("Lyndon Sanche")
+            .build();
+        thing.show();
     });
 
     // Create window and set title
