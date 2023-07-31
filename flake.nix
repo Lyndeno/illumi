@@ -11,17 +11,17 @@
       pkgs = nixpkgs.legacyPackages."${system}";
       naersk-lib = naersk.lib."${system}";
     in rec {
-      packages.gnome-smbios = naersk-lib.buildPackage {
-        pname = "gnome-smbios";
+      packages.illumi = naersk-lib.buildPackage {
+        pname = "illumi";
         root = ./.;
         nativeBuildInputs = [ pkgs.gtk4 pkgs.pkg-config pkgs.libadwaita ];
       };
-      packages.default = packages.gnome-smbios;
+      packages.default = packages.illumi;
 
-      apps.gnome-smbios = utils.lib.mkApp {
-        drv = packages.gnome-smbios;
+      apps.illumi = utils.lib.mkApp {
+        drv = packages.illumi;
       };
-      apps.default = apps.gnome-smbios;
+      apps.default = apps.illumi;
 
       devShells.default = pkgs.mkShell {
         nativeBuildInputs = with pkgs; [ rustc cargo gtk4 pkg-config libadwaita ];

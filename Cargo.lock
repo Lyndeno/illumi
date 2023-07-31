@@ -420,15 +420,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "gnome-smbios"
-version = "0.1.0"
-dependencies = [
- "gtk4",
- "libadwaita",
- "procfs",
-]
-
-[[package]]
 name = "gobject-sys"
 version = "0.17.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -596,6 +587,15 @@ checksum = "0703ae284fc167426161c2e3f1da3ea71d94b21bedbcc9494e92b28e334e3dca"
 dependencies = [
  "cxx",
  "cxx-build",
+]
+
+[[package]]
+name = "illumi"
+version = "0.1.0"
+dependencies = [
+ "gtk4",
+ "libadwaita",
+ "procfs",
 ]
 
 [[package]]
